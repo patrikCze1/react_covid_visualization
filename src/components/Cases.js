@@ -4,9 +4,9 @@ import CaseItem from "./CaseItem";
 class Cases extends Component {
   render() {
     const rows = this.props.countries.map((country, index) => {
-      return <CaseItem countries={country} key={index} />;
+      return <CaseItem country={country} key={index} />;
     });
-    
+    console.log(this.props)
     return (
       <table className="table table-hover table-fixed">
         <thead>
