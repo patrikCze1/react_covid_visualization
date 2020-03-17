@@ -5,9 +5,8 @@ import CountUp from "react-countup";
 function Header(props) {
   const { confirmed, recovered, deaths, lastUpdate } = props.total;
   const date = new Date(lastUpdate);
-  const update = `${date.getHours()}:${date.getMinutes()} ${date.getDate()}/${date.getMonth()}/${date.getYear()}`
+  const update = `${date.getHours()}:${date.getMinutes()} ${date.getDate()}/${date.getMonth()}/${date.getYear()-100}`
 
-  console.log("render");
   return (
     <header className="header">
       <nav className="container">

@@ -27,7 +27,6 @@ class PieGraph extends Component {
     const { confirmed, recovered, deaths } = this.props.cases;
 
     return (
-      
         <Plot
           data={[
             {
@@ -46,11 +45,8 @@ class PieGraph extends Component {
           layout={{
             title: "Percentage",
             width: this.state.width
-            //height: 400,
           }}
-          //config = {{responsive: true}}
         />
-      
     );
   }
 }

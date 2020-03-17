@@ -52,11 +52,11 @@ class MapGraph extends Component {
           layout={{
             title: "World map",
             width: this.state.width,
-            height: 600,
             geo: {
               projection: {
                 type: "robinson"
-              }
+              },
+              showcountries: true
             }
           }}
         />

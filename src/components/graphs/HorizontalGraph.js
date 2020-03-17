@@ -58,9 +58,3 @@ class HorizontalGraph extends Component {
 }
 
 export default HorizontalGraph;
-
-/*
-    Plotly.newPlot("horizontalGraph", data, layout, {
-      displayModeBar: true,
-      responsive: true
-    });*/

@@ -1,5 +1,5 @@
 import React from "react";
-import CountryInfo from "./CountryInfo";
+import CountryDetailInfo from "./CountryDetailInfo";
 import { useLocation } from "react-router-dom";
 import PieGraph from './graphs/PieGraph';
 
@@ -11,9 +11,9 @@ function CountryDetail(props) {
   const actual = confirmed - recovered - deaths;
 
   return (
-    <div className="row fade-up">
-      <div id="countryInfo" className="col-2 ta-left">
-        <h2>{state.countryData.countryRegion}</h2>
+    <div className="row">
+      <div id="countryInfo" className="col-2 ta-left fade-up">
+        <h2>{state.countryData.countryRegion} <img src={`https://www.countryflags.io/${state.countryData.iso2}/flat/32.png`} className="flag" /></h2>
         <table>
           <tr>
             <td>Confirmed</td>
@@ -34,10 +34,10 @@ function CountryDetail(props) {
         </table>
 
         <h3>Country basic info</h3>
-        <CountryInfo name={state.countryData.countryRegion} />
+        <CountryDetailInfo name={state.countryData.countryRegion} />
       </div>
 
-      <div className="col-2">
+      <div className="col-2 fade-up">
         <PieGraph cases={{confirmed: confirmed, recovered: recovered, deaths: deaths}} />
       </div>
     </div>

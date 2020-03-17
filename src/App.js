@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
-import Confirmed from "./components/Confirmed";
+import Cases from "./components/Cases";
 import CountryDetail from "./components/CountryDetail";
 import MapGraph from "./components/graphs/MapGraph";
 import HorizontalGraph from "./components/graphs/HorizontalGraph";
@@ -61,7 +61,6 @@ class App extends React.Component {
       .then(res => res.json())
       .catch(err => console.log(err))
       .then(res => {
-        //console.log(res)
         this.setState({
           dailyData: res,
           loading: false
@@ -134,13 +133,13 @@ class App extends React.Component {
   render() {
     if (this.state.loading)
       return (
-        <div class="sk-chase">
-          <div class="sk-chase-dot"></div>
-          <div class="sk-chase-dot"></div>
-          <div class="sk-chase-dot"></div>
-          <div class="sk-chase-dot"></div>
-          <div class="sk-chase-dot"></div>
-          <div class="sk-chase-dot"></div>
+        <div className="sk-chase">
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
         </div>
       );
 
@@ -160,7 +159,7 @@ class App extends React.Component {
 
             <Switch>
               <Route path="/coutries">
-                <Confirmed countries={this.state.countries} />
+                <Cases countries={this.state.countries} />
               </Route>
 
               <Route path="/:name">

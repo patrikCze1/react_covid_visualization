@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class CountryInfo extends Component {
+class CountryDetailInfo extends Component {
   state = {
     countryInfo: {},
     loading: true
@@ -13,7 +13,7 @@ class CountryInfo extends Component {
       .then(res => res.json())
       .catch(err => console.log(err))
       .then((
-        res //console.log(res)
+        res
       ) =>
         this.setState({
           countryInfo: {
@@ -39,13 +39,8 @@ class CountryInfo extends Component {
     )
 
     let { population, continent } = this.state.countryInfo;
-    if (!population || !continent) {
-      population = 'No info'
-      continent = 'No info'
-    }
     
     return (
-      
       <table className="">
         <tr>
           <td>Population</td>
@@ -56,9 +51,8 @@ class CountryInfo extends Component {
           <td className="ta-left">{continent}</td>
         </tr>
       </table>
-    
     );
   }
 }
 
-export default CountryInfo;
+export default CountryDetailInfo;

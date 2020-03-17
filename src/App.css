@@ -1,5 +1,5 @@
 :root {
-  --color-light-gray: #787b80;
+  --color-light-gray: #8e8f90;
   --color-blue: #3976af;
   --color-red: #c63a33;
   --color-green: #529d3f;
@@ -7,11 +7,11 @@
 
 a {
   text-decoration: none;
-  color: cadetblue;
+  color: rgb(54, 150, 153);
 }
 
 a :hover {
-  color: rgb(125, 183, 185);
+  color: rgb(91, 184, 185);
   text-decoration: underline;
 }
 
@@ -186,7 +186,8 @@ table {
 
 .table {
   border-collapse: collapse;
-  border: 1px solid var(--color-light-gray);
+  border-bottom: 1px solid var(--color-light-gray);
+  
 }
 
 .table-fixed {
@@ -198,7 +199,7 @@ table {
 }
 
 .table thead th {
-  padding: 1% 0%;
+  padding: 1%;
   border-bottom: 1px solid var(--color-light-gray);
 }
 
@@ -210,8 +211,8 @@ table {
 .table tbody tr:nth-child(even) {background: rgb(226, 226, 226)}
 .table tbody tr:nth-child(odd) {background: white}
 
-.table-hover tbody tr :hover {
-  background-color: rgba(235, 235, 235, .5)
+.table-hover > tbody > tr:hover {
+  background-color: rgba(236, 235, 235, 0.8)
 }
 
 
@@ -231,7 +232,7 @@ table {
 @keyframes fadeUp {
   0% {
     opacity: 0;
-    transform: translateY(50%); 
+    transform: translateY(30%); 
   }
 
   100% {
@@ -246,7 +247,7 @@ table {
 @keyframes fadeDown {
   0% {
     opacity: 0;
-    transform: translateY(50%); 
+    transform: translateY(30%); 
   }
 
   100% {
@@ -263,10 +264,18 @@ table {
   }
 }
 
+.flag {
+  position: relative;
+  top: 5px;
+}
+
 /*spiner*/
+
 .sk-chase {
   width: 40px;
   height: 40px;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   animation: sk-chase 2.5s infinite linear both;
 }
@@ -285,7 +294,7 @@ table {
   display: block;
   width: 25%;
   height: 25%;
-  background-color: rgba(255, 255, 255, 0.33);
+  background-color: var(--color-light-gray);
   border-radius: 100%;
   animation: sk-chase-dot-before 2.0s infinite ease-in-out both; 
 }
